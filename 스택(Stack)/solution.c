@@ -3,21 +3,19 @@
 int stack[MAX] = {0,};
 int top=-1;
 
-int push(int n){
+void push(int n){
 	if(MAX - 1 == top){
 		printf("overflow\n");
-		return -1;
+		return;
 	}
 	stack[++top] = n;
-	return 0;
 }
-int pop(){
+void pop(){
 	if(top == -1){
 		printf("underflow\n");
-		return -1;
+		return;
 	}
 	top--;
-	return 0;
 }
 
 int main() {
